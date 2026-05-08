@@ -9,9 +9,14 @@ const config: Config = {
     theme: {
         extend: {
             colors: {
-                navy: "#0c2137",
-                accent: "#eb0029",
-                "off-white": "#f2eeee",
+                slate: {
+                    950: "#0d1117",
+                    900: "#151821",
+                    800: "#1f2430",
+                },
+                accent: "#c7a56a",
+                "off-white": "#f7f1e8",
+                navy: "#0d1117",
             },
             fontFamily: {
                 sans: ["var(--font-sans)"],
