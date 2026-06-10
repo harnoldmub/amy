@@ -1,26 +1,25 @@
 export const profile = {
   name: "Arnold Mubuanga Yate",
   shortName: "Arnold M.Y.",
-  title: "Consultant IT · Ingénieur logiciel · Chef de projet",
-  headline: "Conseil, delivery et produits digitaux pour organisations exigeantes.",
-  availability: "Disponible pour missions de conseil",
-  location: "Lille, Paris et missions hybrides",
+  title: "Ingénieur développement · Chef de projet informatique · Entrepreneur digital",
+  headline: "Applications métier, plateformes web et produits digitaux à forte valeur d'usage.",
+  availability: "Disponible pour échanges et collaborations",
+  location: "Basé entre la France et la Belgique",
   email: "arnold@mubuanga.com",
   linkedin: "https://www.linkedin.com/in/arnold-mubuanga-yate-149b7b151",
   github: "#",
   summary:
-    "J'accompagne entreprises, institutions et structures ambitieuses sur des sujets de conseil, de cadrage, de delivery et de conception de produits digitaux à forte exigence.",
+    "Depuis plus de 6 ans, j'accompagne organisations, entreprises et porteurs de projets dans la conception de solutions numériques performantes: applications web, plateformes métiers, systèmes d'information, événements digitaux et outils SaaS.",
   homeIntro:
-    "Je combine vision produit, pilotage projet et exécution technique pour livrer des expériences digitales robustes, élégantes et utiles aux organisations qui ne peuvent pas se permettre l'à-peu-près.",
+    "Je conçois des solutions numériques simples, robustes et utiles, avec une attention forte portée à l'usage, à la structure et à l'impact concret.",
   resumeIntro:
-    "Mon parcours relie engineering, delivery et compréhension produit. J'aime les sujets où il faut articuler performance technique, architecture claire et expérience utilisateur exigeante.",
+    "Ingénieur développement, chef de projet informatique et entrepreneur digital, je relie engineering, pilotage et vision produit pour faire émerger des solutions numériques durables.",
   yearsExperience: "6+",
 } as const;
 
 export const trustedCompanies = [
   "Ville de Lille",
   "Dassault Systèmes",
-  "NETVIBES",
   "Capgemini",
   "Decathlon",
   "Hewani",
@@ -251,104 +250,93 @@ export const experiences = [
   {
     period: "Depuis novembre 2024",
     company: "Ville de Lille",
-    role: "Chef de projet informatique",
+    role: "Ingénieur Développement / Chef de Projet Informatique",
     summary:
-      "Mission actuelle au sein de la collectivité, centrée sur le pilotage de projets informatiques, la coordination des acteurs et la qualité de mise en oeuvre.",
+      "Pilotage et développement d'applications destinées aux services municipaux et aux associations lilloises.",
     details: [
-      "Pilotage de projets IT au service de besoins métiers et organisationnels de la Ville de Lille.",
-      "Coordination entre parties prenantes, équipes techniques et contributeurs externes selon les enjeux du projet.",
-      "Suivi du cadrage, de l'avancement, des arbitrages et de la qualité de livraison dans un contexte public exigeant.",
+      "Développement d'applications métiers pour les services municipaux.",
+      "Pilotage technique et fonctionnel de projets numériques.",
+      "Conception d'API et d'interfaces web modernes.",
+      "Accompagnement des utilisateurs et des équipes métier.",
     ],
-    stack: ["Gestion de projet", "Pilotage", "Coordination", "Delivery", "Collectivité"],
+    stack: ["PHP", "Symfony", "API", "Angular", "Pilotage", "Collectivité"],
   },
   {
-    period: "2021 — Aujourd'hui",
+    period: "2021 — 2024",
     company: "Dassault Systèmes",
     role: "Software Engineering Specialist",
     summary:
-      "Mission centrée sur l'expérience de recherche et l'évolution d'interfaces produit au sein de la 3DEXPERIENCE Platform (NETVIBES · 3DSearch).",
+      "Développement de fonctionnalités stratégiques de la plateforme 3DSearch au sein de l'équipe R&D de NETVIBES.",
     details: [
-      "Contribution à un moteur de recherche transverse exposé dans un environnement produit multi-marques (CATIA, SOLIDWORKS, ENOVIA...).",
-      "Évolution d'interfaces et composants orientés productivité, clarté et adoption côté utilisateurs.",
-      "Collaboration dans un contexte exigeant mêlant contraintes produit, dette technique et continuité de service.",
+      "Développement de fonctionnalités de recherche avancée.",
+      "Amélioration des performances et de l'expérience utilisateur.",
+      "Participation à des projets internationaux à forte volumétrie.",
+      "Travail en environnement Agile et R&D.",
     ],
-    stack: ["React", "TypeScript", "Design Systems", "Search UX", "JavaScript"],
-  },
-  {
-    period: "2021",
-    company: "Capgemini",
-    role: "Consultant & Ingénieur",
-    summary:
-      "Intervention sur une plateforme digitale dans un contexte client grand groupe, avec exigence de qualité et de delivery.",
-    details: [
-      "Travail au sein d'équipes pluridisciplinaires avec un rythme de livraison soutenu.",
-      "Contribution à l'implémentation et à la stabilisation de fonctionnalités produit.",
-    ],
-    stack: ["JavaScript", "Agile", "Delivery"],
-  },
-  {
-    period: "2019 — 2021",
-    company: "Hewani",
-    role: "Lead Développeur",
-    summary:
-      "Conception et déploiement de solutions web pour accompagner des organisations et entreprises dans leur transformation numérique.",
-    details: [
-      "Cadrage, développement et pilotage de projets digitaux de bout en bout.",
-      "Accompagnement métier pour traduire des besoins terrain en solutions concrètes.",
-      "Développement de sites vitrines, plateformes et applications pour des clients variés.",
-    ],
-    stack: ["Next.js", "Node.js", "React", "UX", "Pilotage"],
+    stack: ["JavaScript", "TypeScript", "Recherche", "UX", "Agile", "R&D"],
   },
   {
     period: "2018 — 2020",
     company: "Dassault Systèmes",
-    role: "Ingénieur Front-End",
+    role: "Apprenti Développeur Front-End",
     summary:
-      "Développement d'interfaces utilisateurs complexes dans un environnement produit exigeant à dimension internationale.",
+      "Développement d'interfaces utilisateurs et participation à l'évolution de la plateforme 3DSearch.",
     details: [
-      "Travail sur des composants front et des parcours nécessitant rigueur, cohérence et robustesse.",
-      "Contribution dans un contexte international avec forte exigence de maintenabilité.",
+      "Développement d'interfaces utilisateurs.",
+      "Participation à l'évolution de la plateforme 3DSearch.",
+      "Collaboration avec les équipes produit et design.",
     ],
-    stack: ["JavaScript", "Front-End", "UI Engineering"],
-  },
-  {
-    period: "2017 — 2018",
-    company: "Développeur apprenti",
-    role: "Formation en alternance",
-    summary:
-      "Premiers pas dans le développement web en alternance — apprentissage des fondamentaux et premiers projets clients.",
-    details: [
-      "Découverte du développement web front-end et back-end dans un cadre professionnel.",
-      "Premiers projets livrés en autonomie croissante.",
-      "Formation aux méthodes agiles et aux bonnes pratiques de code.",
-    ],
-    stack: ["HTML", "CSS", "JavaScript", "PHP", "Git"],
+    stack: ["Front-End", "JavaScript", "Produit", "Design", "3DSearch"],
   },
 ] as const;
 
 export const skillGroups = [
   {
-    name: "Frontend",
-    items: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
+    name: "Développement Web & Applications Métier",
+    items: [
+      "PHP 8",
+      "Symfony",
+      "API Platform",
+      "Angular",
+      "TypeScript",
+      "JavaScript",
+      "MySQL",
+      "Docker",
+      "GitLab CI/CD",
+      "Architecture logicielle",
+      "Conception d'API REST",
+      "Authentification JWT & LDAP",
+    ],
   },
   {
-    name: "Backend",
-    items: ["Node.js", "APIs REST", "Architecture applicative", "Bases de données"],
+    name: "Gestion de Projet",
+    items: [
+      "Analyse des besoins",
+      "Conception fonctionnelle",
+      "Pilotage de projets",
+      "Méthodes Agile",
+      "Coordination des équipes",
+      "Documentation technique",
+      "Accompagnement utilisateurs",
+    ],
   },
   {
-    name: "Search & Data",
-    items: ["Search UX", "Architecture d'information", "Indexation", "Restitution"],
-  },
-  {
-    name: "Produit & méthode",
-    items: ["Discovery", "Delivery", "Design Systems", "Travail transverse"],
+    name: "Produits Digitaux & SaaS",
+    items: [
+      "Conception produit",
+      "UX/UI",
+      "Automatisation des processus",
+      "Plateformes événementielles",
+      "Outils de gestion",
+      "Solutions métier sur mesure",
+    ],
   },
 ] as const;
 
 export const education = [
   {
-    school: "Master en Ingénierie Informatique",
-    degree: "Développement logiciel et produits digitaux",
+    school: "Ingénierie informatique",
+    degree: "Parcours orienté développement logiciel et produits digitaux",
     period: "2015 — 2018",
   },
 ] as const;
@@ -360,41 +348,90 @@ export const languages = [
 ] as const;
 
 export const interests = [
-  "Expériences produit",
-  "Culture web",
-  "Transformation numérique",
-  "Impact social",
-  "Diaspora africaine",
+  "Technologie",
+  "Innovation",
+  "Projets à impact africain et international",
+  "Produits digitaux",
+  "Communautés",
 ] as const;
 
 export const dassaultMission = {
   company: "Dassault Systèmes",
   role: "Software Engineering Specialist",
   team: "3DSearch · NETVIBES",
-  period: "2021 — Aujourd'hui",
+  period: "2021 — 2024",
   context:
-    "Contribution à l'évolution de la recherche transverse au sein de la 3DEXPERIENCE Platform.",
+    "Participation au développement de fonctionnalités stratégiques de la plateforme de recherche 3DSearch utilisée à l'échelle internationale.",
   description:
-    "Au sein d'un environnement produit à grande échelle, je participe à la conception et à l'amélioration d'expériences de recherche capables de connecter plusieurs univers métier. Le travail porte autant sur la lisibilité de l'interface que sur la qualité d'intégration et la fiabilité des comportements.",
+    "Au sein de l'équipe R&D de NETVIBES, j'ai contribué à l'évolution de la plateforme 3DSearch, avec un travail portant sur la recherche avancée, la performance, l'expérience utilisateur et les usages à forte volumétrie dans un environnement international.",
   brands: ["CATIA", "SOLIDWORKS", "SIMULIA", "DELMIA", "ENOVIA", "BIOVIA", "MEDIDATA"],
   highlights: [
-    "Moteur de recherche transverse exposé dans un écosystème produit multi-marques mondial.",
-    "Évolution d'interfaces et comportements orientés productivité et adoption.",
-    "Collaboration dans un contexte mêlant contraintes produit, dette technique et delivery continu.",
+    "Développement de fonctionnalités de recherche avancée.",
+    "Amélioration des performances et de l'expérience utilisateur.",
+    "Participation à des projets internationaux à forte volumétrie.",
+    "Travail en environnement Agile et R&D.",
   ],
-  stack: ["JavaScript", "TypeScript", "React", "Search UX", "Design Systems", "Product Delivery"],
+  stack: ["JavaScript", "TypeScript", "Front-end", "Recherche avancée", "Agile", "R&D"],
 } as const;
 
 export const lilleMission = {
   company: "Ville de Lille",
-  role: "Chef de projet informatique",
+  role: "Ingénieur Développement / Chef de Projet Informatique",
   period: "Depuis novembre 2024",
   summary:
-    "J'interviens sur le pilotage de projets informatiques avec une attention forte portée au cadrage, à la coordination des parties prenantes et à la fiabilité des livrables.",
+    "Aujourd'hui, je pilote et développe des applications destinées aux services municipaux et aux associations lilloises, avec une double approche technique et fonctionnelle.",
   highlights: [
-    "Conduite de projets IT dans un environnement institutionnel où la clarté de gouvernance compte autant que l'exécution.",
-    "Travail de coordination entre besoins métiers, contraintes opérationnelles et réalités de delivery.",
-    "Approche orientée structure, suivi, arbitrage et qualité d'atterrissage des projets.",
+    "Développement d'applications métiers pour les services municipaux.",
+    "Pilotage technique et fonctionnel de projets numériques.",
+    "Conception d'API et d'interfaces web modernes.",
+    "Accompagnement des utilisateurs et des équipes métier.",
   ],
-  tags: ["Collectivité", "Pilotage projet", "Coordination", "Delivery", "IT"],
+  tags: ["Collectivité", "Applications métiers", "API", "Pilotage", "Accompagnement"],
 } as const;
+
+export const aboutParagraphs = [
+  "Je suis Arnold Mubuanga Yate (AMY), ingénieur développement, chef de projet informatique et entrepreneur digital.",
+  "Depuis plus de 6 ans, j'accompagne des organisations, entreprises et porteurs de projets dans la conception de solutions numériques performantes : applications web, plateformes métiers, systèmes d'information, événements digitaux et outils SaaS.",
+  "Aujourd'hui, j'occupe le poste d'Ingénieur Développement / Chef de Projet Informatique à la Ville de Lille, où je pilote et développe des applications destinées aux services municipaux et aux associations lilloises.",
+  "Auparavant, j'ai travaillé chez Dassault Systèmes au sein de l'équipe R&D de NETVIBES, où j'ai participé au développement de fonctionnalités stratégiques de la plateforme de recherche 3DSearch utilisée à l'échelle internationale.",
+] as const;
+
+export const cvMetrics = [
+  { value: "6+", label: "années d'expérience" },
+  { value: "50+", label: "projets réalisés ou accompagnés" },
+  { value: "Full Stack", label: "expertise technique" },
+  { value: "France · Belgique", label: "base de travail" },
+] as const;
+
+export const entrepreneurialProjects = [
+  {
+    name: "U-MOJA.org",
+    url: "https://u-moja.org/",
+    summary: "Plateforme de collecte de fonds participative pour les projets sociaux en RDC.",
+    items: ["Collecte", "Projets sociaux", "Impact", "Association", "Plateforme"],
+  },
+  {
+    name: "Momento Wedding",
+    url: "https://momento.wedding/",
+    summary: "Photographie et films de mariage haut de gamme, entre Kinshasa, Paris et destinations internationales.",
+    items: ["Mariage", "Photographie", "Film", "Image premium", "Direction artistique"],
+  },
+  {
+    name: "Cozy Interieur",
+    url: "https://cozyinterieur.com/",
+    summary: "Studio de design d'intérieur sur-mesure avec une approche sensible de l'espace et de l'esthétique.",
+    items: ["Design intérieur", "Sur-mesure", "Studio", "Décoration", "Identité visuelle"],
+  },
+  {
+    name: "TSELEM Studio",
+    url: "https://tselem.studio/",
+    summary: "Maison de l'image à Kinshasa, dédiée à la photographie, à la vidéo et à la direction artistique premium.",
+    items: ["Portrait", "Mariage", "Maternité", "Branding personnel", "Vidéo"],
+  },
+] as const;
+
+export const visionParagraphs = [
+  "Je crois que la technologie doit résoudre des problèmes réels.",
+  "Mon objectif est de concevoir des solutions simples, durables et évolutives qui créent de la valeur pour les utilisateurs, les entreprises et les communautés.",
+  "Que ce soit dans le développement logiciel, la gestion de projet ou l'entrepreneuriat, je recherche toujours l'équilibre entre innovation, efficacité et impact concret.",
+] as const;

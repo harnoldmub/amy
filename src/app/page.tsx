@@ -2,31 +2,21 @@ import Link from "next/link";
 import {
   ArrowRight,
   BriefcaseBusiness,
-  CheckCircle2,
-  Crown,
-  Globe,
-  Layers,
+  Download,
   MapPin,
-  MoveRight,
   Sparkles,
-  Users,
-  Zap,
 } from "lucide-react";
 
 import ProjectsShowcase from "@/components/ProjectsShowcase";
-import ReferenceMarquee from "@/components/ReferenceMarquee";
-import ScrollReveal from "@/components/ScrollReveal";
-import SectionHeading from "@/components/SectionHeading";
 import SiteFooter from "@/components/SiteFooter";
 import SiteHeader from "@/components/SiteHeader";
-import { profile, projects, services } from "@/data/profile";
+import { cvMetrics, experiences, profile, projects, services, trustedCompanies } from "@/data/profile";
 
-const serviceIcons = { Globe, Layers, Users, Zap };
 const featuredProjects = projects.filter((project) => project.featured).slice(0, 3);
 
 export default function Home() {
   return (
-    <main className="page-background min-h-screen">
+    <main className="min-h-screen bg-[#f2f1ed] text-slate-950">
       <SiteHeader />
 
       <script
@@ -44,282 +34,186 @@ export default function Home() {
         }}
       />
 
-      <section className="hero-aurora relative overflow-hidden px-6 pb-16 pt-40 text-white sm:px-8 sm:pb-24">
-        <div className="grid-fade absolute inset-0 opacity-30" />
-        <div className="absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-black/20 to-transparent" />
-        <div className="hero-orb hero-orb-a" />
-        <div className="hero-orb hero-orb-b" />
-        <div className="hero-orb hero-orb-c" />
-        <div className="relative mx-auto grid max-w-6xl gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
-          <div className="max-w-3xl">
-            <p className="hero-badge reveal-up inline-flex items-center gap-2 rounded-full border border-white/12 bg-white/8 px-4 py-2 text-xs font-semibold uppercase tracking-[0.3em] text-[#f4ddae] backdrop-blur">
-              <Crown className="h-4 w-4" />
-              Conseil premium · pilotage · digital
-            </p>
+      <section className="px-3 pb-3 pt-28 sm:px-5 sm:pt-32">
+        <div className="mx-auto max-w-[1420px] rounded-[2.4rem] border border-black/8 bg-[linear-gradient(180deg,#ffffff_0%,#f6f5f1_100%)] shadow-[0_30px_120px_rgba(15,23,42,0.06)] sm:rounded-[3rem]">
+          <div className="px-4 pb-10 pt-12 sm:px-7 sm:pb-14 sm:pt-16">
+            <section className="px-3 pb-10 sm:px-6">
+              <div className="mx-auto max-w-4xl text-center">
+                <p className="inline-flex items-center gap-2 rounded-full bg-[#f1f0ec] px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.32em] text-slate-500 ring-1 ring-black/5">
+                  <Sparkles className="h-3.5 w-3.5" />
+                  Portfolio personnel · CV
+                </p>
+                <h1 className="mt-7 font-display text-5xl font-semibold leading-[1.02] tracking-[-0.04em] text-slate-950 sm:text-7xl">
+                  Arnold Mubuanga Yate
+                </h1>
+                <p className="mx-auto mt-6 max-w-3xl text-lg font-medium leading-8 text-slate-500 sm:text-xl">
+                  {profile.title}
+                </p>
+                <p className="mx-auto mt-5 max-w-3xl text-base leading-8 text-slate-500 sm:text-lg">
+                  {profile.summary}
+                </p>
 
-            <h1 className="hero-title mt-8 max-w-5xl font-display text-6xl leading-[0.9] sm:text-7xl lg:text-[5.8rem]">
-              <span className="hero-line reveal-up delay-1 block">Le digital</span>
-              <span className="hero-line reveal-up delay-2 block">qui rassure,</span>
-              <span className="hero-line reveal-up delay-3 block">vend et convertit.</span>
-            </h1>
-
-            <p className="reveal-up delay-4 mt-8 max-w-2xl text-lg leading-8 text-slate-300">
-              Conseil, cadrage et exécution haut de gamme pour institutions, entreprises et
-              projets à forte visibilité.
-            </p>
-
-            <div className="reveal-up mt-8 flex flex-col gap-4 sm:flex-row" style={{ animationDelay: "0.52s" }}>
-              <Link
-                href="/contact"
-                className="gold-shimmer inline-flex items-center justify-center gap-2 rounded-full bg-[#f4ddae] px-6 py-3 text-sm font-semibold text-slate-950 transition hover:bg-[#f1d396]"
-              >
-                Réserver un échange
-                <ArrowRight className="h-4 w-4" />
-              </Link>
-              <Link
-                href="/#projets"
-                className="inline-flex items-center justify-center gap-2 rounded-full border border-white/20 bg-white/10 px-6 py-3 text-sm font-semibold text-white transition hover:bg-white/15"
-              >
-                Voir les projets
-                <MoveRight className="h-4 w-4" />
-              </Link>
-            </div>
-
-            <div className="mt-8 grid gap-3 sm:grid-cols-3">
-              {[
-                { label: "Position", value: "Lille · Paris", icon: MapPin },
-                { label: "Format", value: "Conseil & delivery", icon: Sparkles },
-                { label: "Focus", value: "Image · pilotage · résultat", icon: Crown },
-              ].map((item, index) => {
-                const Icon = item.icon;
-
-                return (
-                  <div
-                    key={item.label}
-                    className="hero-stat reveal-up rounded-[1.6rem] border border-white/10 bg-white/[0.05] p-4 backdrop-blur"
-                    style={{ animationDelay: `${0.62 + index * 0.12}s` }}
+                <div className="mt-10 flex flex-col justify-center gap-4 sm:flex-row">
+                  <Link
+                    href="/parcours"
+                    className="inline-flex items-center justify-center gap-2 rounded-full bg-slate-950 px-6 py-3 text-sm font-semibold text-white transition hover:bg-slate-800"
                   >
-                    <div className="flex items-center gap-2 text-[#f4ddae]">
-                      <Icon className="h-4 w-4" />
-                      <span className="text-[11px] font-semibold uppercase tracking-[0.24em]">
-                        {item.label}
-                      </span>
-                    </div>
-                    <p className="mt-3 text-sm font-medium text-white/84">{item.value}</p>
+                    Voir mon CV
+                    <ArrowRight className="h-4 w-4" />
+                  </Link>
+                  <a
+                    href={`mailto:${profile.email}?subject=${encodeURIComponent("Demande de CV PDF")}`}
+                    className="inline-flex items-center justify-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-semibold text-slate-900 ring-1 ring-black/8 transition hover:bg-slate-50"
+                  >
+                    Télécharger le CV
+                    <Download className="h-4 w-4" />
+                  </a>
+                </div>
+              </div>
+
+              <div className="mt-12 grid gap-4 xl:grid-cols-12">
+                <article className="rounded-[2rem] bg-[#f7f6f2] p-7 ring-1 ring-black/6 xl:col-span-4">
+                  <p className="inline-flex rounded-full bg-white px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.28em] text-slate-500 ring-1 ring-black/5">
+                    À propos
+                  </p>
+                  <h2 className="mt-6 font-display text-4xl font-semibold leading-[1.08] tracking-[-0.03em] text-slate-950">
+                    Un profil entre développement, pilotage et entrepreneuriat digital.
+                  </h2>
+                  <p className="mt-6 text-base leading-8 text-slate-600">{profile.homeIntro}</p>
+                  <div className="mt-6 flex flex-wrap gap-3">
+                    <span className="inline-flex items-center gap-2 rounded-full bg-white px-4 py-2 text-sm text-slate-600 ring-1 ring-black/6">
+                      <MapPin className="h-4 w-4" />
+                      {profile.location}
+                    </span>
+                    <span className="rounded-full bg-white px-4 py-2 text-sm text-slate-600 ring-1 ring-black/6">
+                      Entrepreneur digital
+                    </span>
                   </div>
-                );
-              })}
-            </div>
+                </article>
 
-            <div className="mt-8 flex flex-wrap gap-3 text-sm text-white/74">
-              {[
-                "Conseil & cadrage",
-                "Pilotage de projet IT",
-                "Sites et plateformes premium",
-                "Intervention institutions & entreprises",
-              ].map((item, index) => (
-                <span
-                  key={item}
-                  className="hero-chip rounded-full border border-white/10 bg-white/5 px-4 py-2 backdrop-blur"
-                  style={{ animationDelay: `${0.7 + index * 0.12}s` }}
-                >
-                  {item}
-                </span>
-              ))}
-            </div>
-          </div>
+                <article className="rounded-[2rem] bg-white p-7 ring-1 ring-black/6 xl:col-span-5">
+                  <p className="inline-flex rounded-full bg-[#f3f2ee] px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.28em] text-slate-500">
+                    Aujourd'hui
+                  </p>
+                  <h2 className="mt-6 font-display text-4xl font-semibold tracking-[-0.03em] text-slate-950">
+                    {experiences[0].company}
+                  </h2>
+                  <p className="mt-2 text-sm font-medium text-slate-500">{experiences[0].role}</p>
+                  <p className="mt-6 text-base leading-8 text-slate-600">{experiences[0].summary}</p>
+                  <div className="mt-7 grid gap-3 sm:grid-cols-2">
+                    {experiences[0].details.map((detail) => (
+                      <div
+                        key={detail}
+                        className="rounded-[1.4rem] bg-[#f7f6f2] px-5 py-4 text-sm font-medium text-slate-700 ring-1 ring-black/5"
+                      >
+                        {detail}
+                      </div>
+                    ))}
+                  </div>
+                </article>
 
-          <div className="hero-showcase reveal-up delay-3">
-            <div className="hero-showcase-card hero-showcase-main rounded-[2.3rem] border border-white/10 bg-[linear-gradient(180deg,rgba(255,255,255,0.08),rgba(255,255,255,0.03))] p-7 shadow-[0_24px_80px_rgba(0,0,0,0.28)] backdrop-blur-xl">
-              <p className="text-xs font-semibold uppercase tracking-[0.28em] text-[#f4ddae]">
-                Signature
+                <article className="rounded-[2rem] bg-white p-7 ring-1 ring-black/6 xl:col-span-3">
+                  <p className="inline-flex rounded-full bg-[#f3f2ee] px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.28em] text-slate-500">
+                    Repères
+                  </p>
+                  <div className="mt-6 space-y-4">
+                    {cvMetrics.slice(0, 4).map((item) => (
+                      <div
+                        key={item.label}
+                        className="rounded-[1.4rem] bg-[#f7f6f2] px-5 py-4 text-sm font-medium text-slate-700 ring-1 ring-black/5"
+                      >
+                        <p className="font-display text-2xl font-semibold tracking-[-0.03em] text-slate-950">
+                          {item.value}
+                        </p>
+                        <p className="mt-1 text-xs uppercase tracking-[0.2em] text-slate-500">
+                          {item.label}
+                        </p>
+                      </div>
+                    ))}
+                  </div>
+                </article>
+              </div>
+            </section>
+
+            <section className="px-3 py-12 text-center sm:px-6">
+              <p className="inline-flex rounded-full bg-[#f1f0ec] px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.32em] text-slate-500 ring-1 ring-black/5">
+                Expertise
               </p>
-              <h2 className="mt-5 font-display text-4xl text-white">
-                Une présence qui inspire la confiance avant la discussion.
+              <h2 className="mx-auto mt-6 max-w-3xl font-display text-4xl font-semibold leading-[1.08] tracking-[-0.03em] text-slate-950 sm:text-5xl">
+                Une offre claire pour structurer, piloter et livrer.
               </h2>
-              <p className="mt-5 text-base leading-8 text-slate-300">{profile.summary}</p>
-
-              <div className="mt-8 space-y-4">
-                {[
-                  "Direction claire pour les projets où l'image et la crédibilité sont centrales.",
-                  "Pilotage serein des sujets sensibles, publics ou fortement exposés.",
-                  "Finition premium jusque dans la perception finale du produit.",
-                ].map((item) => (
-                  <div key={item} className="flex items-start gap-3">
-                    <CheckCircle2 className="mt-1 h-4 w-4 shrink-0 text-[#f4ddae]" />
-                    <p className="text-sm leading-7 text-slate-200">{item}</p>
-                  </div>
+              <div className="mt-12 grid gap-4 xl:grid-cols-4">
+                {services.map((service) => (
+                  <article
+                    key={service.title}
+                    className="rounded-[2rem] bg-white p-7 text-left ring-1 ring-black/6"
+                  >
+                    <div className="inline-flex rounded-full bg-[#f3f2ee] px-3 py-2 text-[11px] font-semibold uppercase tracking-[0.26em] text-slate-500">
+                      {service.title}
+                    </div>
+                    <p className="mt-6 text-base leading-8 text-slate-600">{service.description}</p>
+                  </article>
                 ))}
               </div>
-            </div>
+            </section>
 
-            <div className="mt-5 grid gap-4 sm:grid-cols-2">
-              <div className="hero-mini-card rounded-[1.7rem] border border-white/10 bg-[#111720]/88 p-5 text-white backdrop-blur">
-                <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[#f4ddae]">
-                  Mission actuelle
-                </p>
-                <p className="mt-3 font-display text-3xl">Ville de Lille</p>
-                <p className="mt-2 text-sm text-white/68">Chef de projet informatique</p>
-              </div>
-              <div className="hero-mini-card rounded-[1.7rem] border border-white/10 bg-[#111720]/88 p-5 text-white backdrop-blur">
-                <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[#f4ddae]">
-                  Référence forte
-                </p>
-                <p className="mt-3 font-display text-3xl">Dassault Systèmes</p>
-                <p className="mt-2 text-sm text-white/68">3DSearch · 3DEXPERIENCE</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="bg-[#0d1117] px-6 py-12 sm:px-8">
-        <div className="mx-auto max-w-6xl">
-          <div className="mb-6 flex flex-col gap-3 text-center">
-            <p className="text-xs font-semibold uppercase tracking-[0.34em] text-[#c7a56a]">
-              Références
-            </p>
-            <p className="mx-auto max-w-3xl text-base leading-8 text-slate-300">
-              Secteur public, grands groupes, produits complexes et projets à forte visibilité
-            </p>
-          </div>
-          <ReferenceMarquee />
-          <div className="mt-8 rounded-[2rem] border border-white/10 bg-white/[0.04] px-6 py-5 text-center text-sm leading-7 text-slate-300 shadow-[0_16px_50px_rgba(0,0,0,0.18)]">
-            Des environnements où la lisibilité, la fiabilité et la qualité d&apos;exécution sont non négociables.
-          </div>
-        </div>
-      </section>
-
-      <section id="consulting" className="bg-[var(--background)] px-6 py-24 sm:px-8">
-        <div className="mx-auto max-w-6xl">
-          <ScrollReveal>
-            <SectionHeading
-              eyebrow="Conseil"
-              title="Une offre pensée pour les décideurs qui veulent avancer sans improviser."
-              description="Quatre axes complémentaires — du premier échange stratégique jusqu'à la livraison d'un produit soigné."
-            />
-          </ScrollReveal>
-
-          <div className="mt-14 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
-            {services.map((service, index) => {
-              const Icon = serviceIcons[service.icon as keyof typeof serviceIcons];
-
-              return (
-                <ScrollReveal key={service.title} delay={index * 0.1}>
-                  <article className="h-full rounded-[2rem] bg-white p-7 shadow-lg shadow-slate-950/5 ring-1 ring-[#d9c9af] transition hover:-translate-y-1 hover:shadow-xl">
-                    <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#f5ead7] text-[#9f7a3f]">
-                      <Icon className="h-5 w-5" />
-                    </div>
-                    <h3 className="mt-6 font-display text-3xl text-slate-950">{service.title}</h3>
-                    <p className="mt-4 text-sm leading-7 text-slate-600">{service.description}</p>
-                  </article>
-                </ScrollReveal>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
-      <section id="projets" className="bg-white px-6 py-24 sm:px-8">
-        <div className="mx-auto max-w-6xl">
-          <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
-            <SectionHeading
-              eyebrow="Projets"
-              title="Des réalisations qui montrent le niveau d'exigence, pas seulement la capacité à livrer."
-              description="Sites vitrines, plateformes et applications — chaque réalisation conçue pour durer et convaincre."
-            />
-
-            <Link
-              href="/projets"
-              className="inline-flex items-center gap-2 rounded-full border border-[#d7c0a2] bg-[#fffaf4] px-5 py-3 text-sm font-semibold text-slate-900 transition hover:border-[#c7a56a] hover:text-[#9f7a3f]"
-            >
-              Voir tous les projets
-              <ArrowRight className="h-4 w-4" />
-            </Link>
-          </div>
-
-          <ProjectsShowcase projects={featuredProjects} compact />
-        </div>
-      </section>
-
-      <section className="bg-[var(--background)] px-6 py-24 sm:px-8">
-        <div className="mx-auto grid max-w-6xl gap-8 lg:grid-cols-[0.9fr_1.1fr]">
-          <ScrollReveal>
-            <div className="rounded-[2.2rem] bg-[#0d1117] p-8 text-white shadow-2xl shadow-black/10">
-              <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[#f4ddae]">
-                Pourquoi moi
-              </p>
-              <h2 className="mt-5 font-display text-5xl">
-                Une alliance rare entre conseil, projet et capacité à produire.
-              </h2>
-              <p className="mt-6 text-lg leading-8 text-slate-300">
-                Je peux intervenir là où beaucoup séparent encore le cadrage, la coordination et
-                l&apos;exécution. Cette continuité réduit les frictions, sécurise les choix et améliore la
-                qualité perçue du résultat.
-              </p>
-            </div>
-          </ScrollReveal>
-
-          <div className="grid gap-6 md:grid-cols-2">
-            {[
-              {
-                title: "Pour les dirigeants",
-                text: "Un interlocuteur capable de transformer une ambition encore floue en trajectoire claire, crédible et pilotable.",
-              },
-              {
-                title: "Pour les équipes",
-                text: "Un partenaire qui comprend les contraintes de delivery, la réalité technique et les arbitrages nécessaires au bon moment.",
-              },
-              {
-                title: "Pour les marques",
-                text: "Une attention particulière portée à la perception, à la finition et à la cohérence de l'expérience finale.",
-              },
-              {
-                title: "Pour les projets sensibles",
-                text: "Une approche calme, structurée et exigeante dans les environnements publics, complexes ou fortement exposés.",
-              },
-            ].map((item, index) => (
-              <ScrollReveal key={item.title} delay={index * 0.08}>
-                <div className="h-full rounded-[2rem] bg-white p-7 shadow-lg shadow-slate-950/5 ring-1 ring-[#e4d7c5]">
-                  <div className="flex items-center gap-3">
-                    <BriefcaseBusiness className="h-5 w-5 text-[#9f7a3f]" />
-                    <h3 className="font-display text-3xl text-slate-950">{item.title}</h3>
-                  </div>
-                  <p className="mt-4 text-sm leading-7 text-slate-600">{item.text}</p>
+            <section className="px-3 py-12 sm:px-6" id="projets">
+              <div className="flex flex-col gap-5 lg:flex-row lg:items-end lg:justify-between">
+                <div className="max-w-3xl">
+                  <p className="inline-flex rounded-full bg-[#f1f0ec] px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.32em] text-slate-500 ring-1 ring-black/5">
+                    Projets sélectionnés
+                  </p>
+                  <h2 className="mt-6 font-display text-4xl font-semibold leading-[1.08] tracking-[-0.03em] text-slate-950 sm:text-5xl">
+                    Quelques réalisations qui prolongent mon parcours.
+                  </h2>
+                  <p className="mt-5 max-w-2xl text-base leading-8 text-slate-500">
+                    Sites vitrines, plateformes et applications conçus pour des usages réels et des
+                    environnements exigeants.
+                  </p>
                 </div>
-              </ScrollReveal>
-            ))}
-          </div>
-        </div>
-      </section>
 
-      <section className="bg-[#0d1117] px-6 py-24 text-white sm:px-8">
-        <div className="mx-auto max-w-5xl rounded-[2.5rem] border border-white/10 bg-white/5 px-8 py-14 text-center backdrop-blur">
-          <p className="text-xs font-semibold uppercase tracking-[0.28em] text-[#f4ddae]">
-            Conversion
-          </p>
-          <h2 className="mt-6 font-display text-5xl">
-            Si le projet doit être bien cadré, bien présenté et bien livré, parlons-en.
-          </h2>
-          <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-slate-300">
-            Je peux intervenir en amont pour structurer, pendant l&apos;exécution pour piloter, ou en
-            réalisation pour donner au projet la qualité qu&apos;il mérite.
-          </p>
-          <div className="mt-10 flex flex-col justify-center gap-4 sm:flex-row">
-            <Link
-              href="/contact"
-              className="inline-flex items-center justify-center gap-2 rounded-full bg-[#f4ddae] px-6 py-3 text-sm font-semibold text-slate-950 transition hover:bg-[#f1d396]"
-            >
-              Me contacter
-              <ArrowRight className="h-4 w-4" />
-            </Link>
-            <Link
-              href="/parcours"
-              className="inline-flex items-center justify-center gap-2 rounded-full border border-white/20 bg-white/5 px-6 py-3 text-sm font-semibold text-white transition hover:bg-white/10"
-            >
-              Voir le parcours
-              <Sparkles className="h-4 w-4" />
-            </Link>
+                <Link
+                  href="/projets"
+                  className="inline-flex items-center gap-2 rounded-full bg-white px-5 py-3 text-sm font-semibold text-slate-900 ring-1 ring-black/8 transition hover:bg-slate-50"
+                >
+                  Voir tous les projets
+                  <ArrowRight className="h-4 w-4" />
+                </Link>
+              </div>
+
+              <div className="mt-10">
+                <ProjectsShowcase projects={featuredProjects} compact />
+              </div>
+            </section>
+
+            <section className="px-3 pb-4 pt-12 sm:px-6">
+              <div className="grid gap-4 xl:grid-cols-12">
+                <article className="rounded-[2rem] bg-[#f7f6f2] p-7 ring-1 ring-black/6 xl:col-span-5">
+                  <p className="inline-flex rounded-full bg-white px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.28em] text-slate-500 ring-1 ring-black/5">
+                    Références
+                  </p>
+                  <h2 className="mt-6 font-display text-4xl font-semibold leading-[1.08] tracking-[-0.03em] text-slate-950">
+                    Secteur public, grands groupes et projets à forte visibilité.
+                  </h2>
+                  <p className="mt-6 text-base leading-8 text-slate-600">
+                    Un parcours construit dans des contextes où la structure, la fiabilité et la
+                    clarté d'exécution comptent réellement.
+                  </p>
+                </article>
+
+                {trustedCompanies.slice(0, 3).map((item) => (
+                  <article
+                    key={item}
+                    className="rounded-[2rem] bg-white p-7 ring-1 ring-black/6 xl:col-span-7"
+                  >
+                    <div className="flex items-start gap-4">
+                      <BriefcaseBusiness className="mt-1 h-5 w-5 shrink-0 text-slate-500" />
+                      <p className="text-base leading-8 text-slate-600">{item}</p>
+                    </div>
+                  </article>
+                ))}
+              </div>
+            </section>
           </div>
         </div>
       </section>

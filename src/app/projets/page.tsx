@@ -9,77 +9,54 @@ import SiteHeader from "@/components/SiteHeader";
 export const metadata: Metadata = {
   title: "Projets",
   description:
-    "11 projets livrés — sites vitrines, plateformes, applications web et projets institutionnels réalisés par Arnold Mubuanga Yate.",
+    "Réalisations d'Arnold Mubuanga Yate — sites vitrines, plateformes, applications web et projets institutionnels.",
 };
 
 export default function ProjetsPage() {
   return (
-    <main className="min-h-screen bg-[var(--background)]">
+    <main className="min-h-screen bg-[#f2f1ed] text-slate-950">
       <SiteHeader />
 
-      <section className="hero-aurora relative overflow-hidden bg-[#0d1117] px-6 pb-20 pt-40 text-white sm:px-8">
-        <div className="grid-fade absolute inset-0 opacity-20" />
-        <div className="absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-black/20 to-transparent" />
-        <div className="hero-orb hero-orb-a" />
-        <div className="hero-orb hero-orb-b" />
+      <section className="px-3 pb-3 pt-28 sm:px-5 sm:pt-32">
+        <div className="mx-auto max-w-[1420px] rounded-[2.4rem] border border-black/8 bg-[linear-gradient(180deg,#ffffff_0%,#f6f5f1_100%)] shadow-[0_30px_120px_rgba(15,23,42,0.06)] sm:rounded-[3rem]">
+          <div className="px-4 pb-12 pt-12 sm:px-7 sm:pb-16 sm:pt-16">
+            <section className="px-3 pb-10 text-center sm:px-6">
+              <p className="inline-flex items-center gap-2 rounded-full bg-[#f1f0ec] px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.32em] text-slate-500 ring-1 ring-black/5">
+                <Layers className="h-3.5 w-3.5" />
+                Réalisations
+              </p>
+              <h1 className="mx-auto mt-7 max-w-4xl font-display text-5xl font-semibold leading-[1.02] tracking-[-0.04em] text-slate-950 sm:text-7xl">
+                Projets réels.
+                <br />
+                Résultats concrets.
+              </h1>
+              <p className="mx-auto mt-6 max-w-3xl text-lg font-medium leading-8 text-slate-500 sm:text-xl">
+                Sites vitrines, plateformes communautaires, applications web et projets
+                institutionnels — chaque réalisation répond à un besoin précis.
+              </p>
 
-        <div className="relative mx-auto max-w-6xl">
-          <p className="reveal-up inline-flex items-center gap-2 rounded-full border border-white/12 bg-white/8 px-4 py-2 text-xs font-semibold uppercase tracking-[0.3em] text-[#f4ddae] backdrop-blur">
-            <Layers className="h-4 w-4" />
-            Réalisations
-          </p>
-          <h1 className="hero-title reveal-up delay-1 mt-8 max-w-3xl font-display text-6xl leading-[0.92] sm:text-7xl lg:text-[5.2rem]">
-            Projets réels.
-            <br />
-            <span className="text-[#f4ddae]">Résultats concrets.</span>
-          </h1>
-          <p className="reveal-up delay-2 mt-8 max-w-2xl text-lg leading-8 text-slate-300">
-            Sites vitrines, plateformes communautaires, applications web, projets
-            institutionnels — chaque réalisation répond à un besoin précis et une exigence
-            de qualité.
-          </p>
+              <div className="mt-10 flex flex-col justify-center gap-4 sm:flex-row">
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center justify-center gap-2 rounded-full bg-slate-950 px-6 py-3 text-sm font-semibold text-white transition hover:bg-slate-800"
+                >
+                  Discuter de votre projet
+                  <ArrowRight className="h-4 w-4" />
+                </Link>
+                <Link
+                  href="/parcours"
+                  className="inline-flex items-center justify-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-semibold text-slate-900 ring-1 ring-black/8 transition hover:bg-slate-50"
+                >
+                  Voir le parcours
+                  <Sparkles className="h-4 w-4" />
+                </Link>
+              </div>
+            </section>
 
-          <div className="reveal-up mt-8 flex flex-col gap-4 sm:flex-row" style={{ animationDelay: "0.32s" }}>
-            <Link
-              href="/contact"
-              className="cta-gold inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-semibold"
-            >
-              Discuter de votre projet
-              <ArrowRight className="h-4 w-4" />
-            </Link>
-            <Link
-              href="/parcours"
-              className="inline-flex items-center justify-center gap-2 rounded-full border border-white/20 bg-white/10 px-6 py-3 text-sm font-semibold text-white transition hover:bg-white/15"
-            >
-              Voir le parcours
-              <Sparkles className="h-4 w-4" />
-            </Link>
+            <section className="px-3 sm:px-6">
+              <ProjectsGrid />
+            </section>
           </div>
-        </div>
-      </section>
-
-      <section className="px-6 pb-24 pt-16 sm:px-8">
-        <div className="mx-auto max-w-6xl">
-          <ProjectsGrid />
-        </div>
-      </section>
-
-      <section className="bg-[#0d1117] px-6 py-24 text-white sm:px-8">
-        <div className="mx-auto max-w-5xl rounded-[2.5rem] border border-white/10 bg-white/5 px-8 py-14 text-center backdrop-blur">
-          <p className="text-xs font-semibold uppercase tracking-[0.28em] text-[#f4ddae]">
-            Prochain sur la liste
-          </p>
-          <h2 className="mt-6 font-display text-5xl">Votre projet pourrait être ici.</h2>
-          <p className="mx-auto mt-5 max-w-lg text-lg leading-8 text-slate-300">
-            Parlons de ce que vous voulez construire — et faisons-le ensemble.
-          </p>
-          <Link
-            href="/contact"
-            className="cta-gold mt-10 inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold"
-          >
-            Me contacter
-            <ArrowRight className="h-4 w-4" />
-          </Link>
         </div>
       </section>
 
