@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import {
   ArrowRight,
@@ -11,8 +12,16 @@ import ProjectsShowcase from "@/components/ProjectsShowcase";
 import SiteFooter from "@/components/SiteFooter";
 import SiteHeader from "@/components/SiteHeader";
 import { cvMetrics, experiences, profile, projects, services, trustedCompanies } from "@/data/profile";
+import { buildPageMetadata } from "@/lib/seo";
 
 const featuredProjects = projects.filter((project) => project.featured).slice(0, 3);
+
+export const metadata: Metadata = buildPageMetadata({
+  title: "AMY | CV et portfolio personnel",
+  description:
+    "Découvrez le CV et le portfolio d'Arnold Mubuanga Yate (AMY), ingénieur développement, chef de projet informatique et entrepreneur digital.",
+  path: "/",
+});
 
 export default function Home() {
   return (
@@ -93,7 +102,7 @@ export default function Home() {
 
                 <article className="rounded-[2rem] bg-white p-7 ring-1 ring-black/6 xl:col-span-5">
                   <p className="inline-flex rounded-full bg-[#f3f2ee] px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.28em] text-slate-500">
-                    Aujourd'hui
+                    Aujourd&apos;hui
                   </p>
                   <h2 className="mt-6 font-display text-4xl font-semibold tracking-[-0.03em] text-slate-950">
                     {experiences[0].company}
@@ -197,7 +206,7 @@ export default function Home() {
                   </h2>
                   <p className="mt-6 text-base leading-8 text-slate-600">
                     Un parcours construit dans des contextes où la structure, la fiabilité et la
-                    clarté d'exécution comptent réellement.
+                    clarté d&apos;exécution comptent réellement.
                   </p>
                 </article>
 

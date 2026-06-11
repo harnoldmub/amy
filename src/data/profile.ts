@@ -1,6 +1,6 @@
 export const profile = {
   name: "Arnold Mubuanga Yate",
-  shortName: "Arnold M.Y.",
+  shortName: "AMY",
   title: "Ingénieur développement · Chef de projet informatique · Entrepreneur digital",
   headline: "Applications métier, plateformes web et produits digitaux à forte valeur d'usage.",
   availability: "Disponible pour échanges et collaborations",

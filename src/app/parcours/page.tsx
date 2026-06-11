@@ -22,12 +22,14 @@ import {
   skillGroups,
   visionParagraphs,
 } from "@/data/profile";
+import { buildPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "CV & Parcours",
+export const metadata: Metadata = buildPageMetadata({
+  title: "Parcours | CV d'AMY",
   description:
-    "CV d'Arnold Mubuanga Yate — ingénieur développement, chef de projet informatique et entrepreneur digital.",
-};
+    "Consultez le parcours d'Arnold Mubuanga Yate (AMY), de Dassault Systèmes à la Ville de Lille, entre développement, pilotage et produits digitaux.",
+  path: "/parcours",
+});
 
 const cvNavItems = [
   { label: "À propos", href: "#about" },
@@ -113,7 +115,7 @@ export default function ParcoursPage() {
                   href="/contact"
                   className="inline-flex items-center justify-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-semibold text-slate-900 ring-1 ring-black/8 transition hover:bg-slate-50"
                 >
-                  Discuter d'un projet
+                  Discuter d&apos;un projet
                   <ArrowRight className="h-4 w-4" />
                 </Link>
               </div>
@@ -226,7 +228,7 @@ export default function ParcoursPage() {
                   Solutions numériques performantes, simples, durables et utiles.
                 </p>
                 <p className="mt-5 text-sm leading-7 text-slate-600">
-                  Applications web, plateformes métiers, systèmes d'information, événements digitaux
+                  Applications web, plateformes métiers, systèmes d&apos;information, événements digitaux
                   et outils SaaS conçus pour répondre à des besoins concrets.
                 </p>
               </article>
@@ -241,8 +243,8 @@ export default function ParcoursPage() {
               Des compétences structurées pour concevoir, piloter et livrer.
             </h2>
             <p className="mx-auto mt-5 max-w-2xl text-base leading-8 text-slate-500">
-              Une base technique solide, complétée par une vraie capacité d'analyse, de coordination
-              et d'accompagnement des usages.
+              Une base technique solide, complétée par une vraie capacité d&apos;analyse, de coordination
+              et d&apos;accompagnement des usages.
             </p>
 
             <div className="mt-12 grid gap-4 xl:grid-cols-3">

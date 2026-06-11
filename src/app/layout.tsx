@@ -4,6 +4,7 @@ import "primereact/resources/themes/lara-light-indigo/theme.css";
 import "primereact/resources/primereact.min.css";
 import "primeicons/primeicons.css";
 import "./globals.css";
+import { defaultKeywords, fullName, metadataBase, siteName } from "@/lib/seo";
 
 const fontSans = Manrope({
   variable: "--font-sans",
@@ -18,13 +19,38 @@ const fontDisplay = Sora({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://portfolio.local"),
+  metadataBase,
+  applicationName: siteName,
   title: {
-    default: "Arnold Mubuanga Yate | Consultant IT & Chef de projet",
-    template: "%s | Arnold Mubuanga Yate",
+    default: "AMY | CV, portfolio et projets digitaux",
+    template: "%s | AMY",
   },
   description:
-    "Site portfolio premium d'Arnold Mubuanga Yate, consultant IT, chef de projet et ingénieur logiciel pour missions de conseil, delivery et produits digitaux.",
+    "CV en ligne et portfolio d'Arnold Mubuanga Yate (AMY), ingénieur développement, chef de projet informatique et entrepreneur digital.",
+  keywords: defaultKeywords,
+  openGraph: {
+    title: "AMY | CV, portfolio et projets digitaux",
+    description:
+      "CV en ligne et portfolio d'Arnold Mubuanga Yate (AMY), ingénieur développement, chef de projet informatique et entrepreneur digital.",
+    siteName,
+    locale: "fr_FR",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "AMY | CV, portfolio et projets digitaux",
+    description:
+      "CV en ligne et portfolio d'Arnold Mubuanga Yate (AMY), ingénieur développement, chef de projet informatique et entrepreneur digital.",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+  authors: [{ name: fullName }],
+  creator: fullName,
+  publisher: fullName,
+  category: "portfolio",
+  referrer: "origin-when-cross-origin",
 };
 
 export default function RootLayout({

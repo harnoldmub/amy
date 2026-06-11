@@ -5,12 +5,14 @@ import ContactForm from "@/components/ContactForm";
 import SiteFooter from "@/components/SiteFooter";
 import SiteHeader from "@/components/SiteHeader";
 import { profile } from "@/data/profile";
+import { buildPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Contact",
+export const metadata: Metadata = buildPageMetadata({
+  title: "Contact | AMY",
   description:
-    "Contacter Arnold Mubuanga Yate pour une mission, un échange produit ou une collaboration technique.",
-};
+    "Contactez Arnold Mubuanga Yate (AMY) pour une mission, un échange autour d'un produit digital ou une collaboration technique.",
+  path: "/contact",
+});
 
 export default function ContactPage() {
   return (

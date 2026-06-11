@@ -5,12 +5,14 @@ import { ArrowRight, Layers, Sparkles } from "lucide-react";
 import ProjectsGrid from "@/components/ProjectsGrid";
 import SiteFooter from "@/components/SiteFooter";
 import SiteHeader from "@/components/SiteHeader";
+import { buildPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Projets",
+export const metadata: Metadata = buildPageMetadata({
+  title: "Projets | Portfolio d'AMY",
   description:
-    "Réalisations d'Arnold Mubuanga Yate — sites vitrines, plateformes, applications web et projets institutionnels.",
-};
+    "Explorez les projets d'Arnold Mubuanga Yate (AMY) : sites vitrines, plateformes, applications web et réalisations institutionnelles.",
+  path: "/projets",
+});
 
 export default function ProjetsPage() {
   return (
